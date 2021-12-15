@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hoang Linh Nhi Group</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Around - Multipurpose Bootstrap Template">
+    <meta name="keywords" content="bootstrap, business, consulting, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, multipurpose, product landing, shop, software, ui kit, web studio, landing, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="50x50" href="img/logo/favicon-hln.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/logo/favicon-hln.svg">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Page loading styles-->
+    <style>
+        .page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all .4s .2s ease-in-out;
+            transition: all .4s .2s ease-in-out;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
+        }
+        
+        .page-loading.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity .2s ease-in-out;
+            transition: opacity .2s ease-in-out;
+            opacity: 0;
+        }
+        
+        .page-loading.active>.page-loading-inner {
+            opacity: 1;
+        }
+        
+        .page-loading-inner>span {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #737491;
+        }
+        
+        .page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: .75rem;
+            vertical-align: text-bottom;
+            border: .15em solid #766df4;
+            border-right-color: transparent;
+            border-radius: 50%;
+            -webkit-animation: spinner .75s linear infinite;
+            animation: spinner .75s linear infinite;
+        }
+        
+        @-webkit-keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+        (function() {
+            window.onload = function() {
+                var preloader = document.querySelector('.page-loading');
+                preloader.classList.remove('active');
+                setTimeout(function() {
+                    preloader.remove();
+                }, 2000);
+            };
+        })();
+    </script>
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="vendor/simplebar/dist/simplebar.min.css" />
+    <link rel="stylesheet" media="screen" href="vendor/tiny-slider/dist/tiny-slider.css" />
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="css/theme.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Google Tag Manager-->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                '../www.googletagmanager.com/gtm5445.html?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WKV3GT5');
+    </script>
+</head>
+<!-- Body-->
+
+<body>
+    <!-- Google Tag Manager (noscript)-->
+    <noscript>
+      <iframe src="http://www.googletagmanager.com/ns.html?id=GTM-WKV3GT5" height="0" width="0" style="display: none; visibility: hidden;"></iframe>
+    </noscript>
+    <!-- Page loading spinner-->
+    <div class="page-loading active">
+        <div class="page-loading-inner">
+            <div class="page-spinner"></div><span>Loading...</span>
+        </div>
+    </div>
+    <main class="page-wrapper">
+        <!-- Sign In Modal-->
+        <div class="modal fade" id="modal-signin" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content border-0">
+                    <div class="view show" id="modal-signin-view">
+                        <div class="modal-header border-0 bg-dark px-4">
+                            <h4 class="modal-title text-light">Đăng nhập</h4>
+                            <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="btn-close "></button>
+                        </div>
+                        <div class="modal-body px-4">
+                            <p class="fs-ms text-muted">Đăng nhập bằng tài khoản đã đăng ký trên web site của chúng tôi</p>
+                            <form class="needs-validation" novalidate>
+                                <div class="mb-3">
+                                    <div class="input-group"><i class="ai-mail position-absolute top-50 start-0 translate-middle-y ms-3"></i>
+                                        <input class="form-control rounded" type="email" placeholder="Email" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="input-group"><i class="ai-lock position-absolute top-50 start-0 translate-middle-y ms-3"></i>
+                                        <div class="password-toggle w-100">
+                                            <input class="form-control" type="password" placeholder="Password" required>
+                                            <label class="password-toggle-btn" aria-label="Show/hide password">
+                          <input class="password-toggle-check" type="checkbox"><span class="password-toggle-indicator"></span>
+                        </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3 mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="keep-signed">
+                                        <label class="form-check-label fs-sm" for="keep-signed">Keep me signed in</label>
+                                    </div><a class="nav-link-style fs-ms" href="password-recovery.html">Quên mật khẩu</a>
+                                </div>
+                                <button class="btn btn-primary d-block w-100" type="submit">Đăng nhập</button>
+                                <p class="fs-sm pt-3 mb-0">Bạn chưa có tài khoản? <a href='#' class='fw-medium' data-view='#modal-signup-view'>Đăng ký</a></p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="view" id="modal-signup-view">
+                        <div class="modal-header border-0 bg-dark px-4">
+                            <h4 class="modal-title text-light">Đăng nhập</h4>
+                            <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="btn-close"></button>
+                        </div>
+                        <div class="modal-body px-4">
+                            <p class="fs-ms text-muted">Registration takes less than a minute but gives you full control over your orders.</p>
+                            <form class="needs-validation" novalidate>
+                                <div class="mb-3">
+                                    <input class="form-control" type="text" placeholder="Full name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input class="form-control" type="text" placeholder="Email" required>
+                                </div>
+                                <div class="mb-3 password-toggle">
+                                    <input class="form-control" type="password" placeholder="Password" required>
+                                    <label class="password-toggle-btn" aria-label="Show/hide password">
+                      <input class="password-toggle-check" type="checkbox"><span class="password-toggle-indicator"></span>
+                    </label>
+                                </div>
+                                <div class="mb-3 password-toggle">
+                                    <input class="form-control" type="password" placeholder="Confirm password" required>
+                                    <label class="password-toggle-btn" aria-label="Show/hide password">
+                      <input class="password-toggle-check" type="checkbox"><span class="password-toggle-indicator"></span>
+                    </label>
+                                </div>
+                                <button class="btn btn-primary d-block w-100" type="submit">Đăng ký</button>
+                                <p class="fs-sm pt-3 mb-0">Bạn đã có tài khoản? <a href='#' class='fw-medium' data-view='#modal-signin-view'>Đăng nhập</a></p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-body text-center px-4 pt-2 pb-4">
+                        <hr class="my-0">
+                        <p class="fs-sm fw-medium text-heading pt-4">Đăng nhập với</p><a class="btn-social bs-facebook bs-lg mx-1 mb-2" href="#"><i class="ai-facebook"></i></a><a class="btn-social bs-twitter bs-lg mx-1 mb-2" href="#"><i class="ai-twitter"></i></a><a class="btn-social bs-instagram bs-lg mx-1 mb-2"
+                            href="#"><i class="ai-instagram"></i></a><a class="btn-social bs-google bs-lg mx-1 mb-2" href="#"><i class="ai-google"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Shopping cart off-canvas-->
+        <div class="offcanvas offcanvas-end" id="shoppingCart">
+            <div class="offcanvas-header navbar-shadow px-4 mb-2">
+                <h5 class="mt-1 mb-0">Giỏ hàng</h5>
+                <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body p-4 flex-center" data-simplebar>
+                <div class="d-flex align-items-center mb-3">
+                    <a class="d-block flex-shrink-0" href="shop-single.html"><img class="rounded" src="img/demo/shop-homepage/thumbnails/05.jpg" alt="Product" width="60"></a>
+                    <div class="w-100 ps-2 ms-1">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="me-3">
+                                <h4 class="nav-heading fs-md mb-1"><a class="fw-medium" href="shop-single.html">Smart Watch Series 5</a></h4>
+                                <div class="d-flex align-items-center fs-sm"><span class="me-2">$364.99</span><span class="me-2">x</span>
+                                    <input class="form-control form-control-sm px-2" type="number" style="max-width: 3.5rem;" min="1" value="1">
+                                </div>
+                            </div>
+                            <div class="ps-3 border-start"><a class="d-block text-danger text-decoration-none fs-xl" href="#" data-bs-toggle="tooltip" title="Remove"><i class="ai-x-circle"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                    <a class="d-block flex-shrink-0" href="shop-single.html"><img class="rounded" src="img/demo/shop-homepage/thumbnails/02.jpg" alt="Product" width="60"></a>
+                    <div class="w-100 ps-2 ms-1">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="me-3">
+                                <h4 class="nav-heading fs-md mb-1"><a class="fw-medium" href="shop-single.html">Running Sneakers, Collection</a></h4>
+                                <div class="d-flex align-items-center fs-sm"><span class="me-2">$145.00</span><span class="me-2">x</span>
+                                    <input class="form-control form-control-sm px-2" type="number" style="max-width: 3.5rem;" min="1" value="1">
+                                </div>
+                            </div>
+                            <div class="ps-3 border-start"><a class="d-block text-danger text-decoration-none fs-xl" href="#" data-bs-toggle="tooltip" title="Remove"><i class="ai-x-circle"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                    <a class="d-block flex-shrink-0" href="shop-single.html"><img class="rounded" src="img/demo/shop-homepage/thumbnails/06.jpg" alt="Product" width="60"></a>
+                    <div class="w-100 ps-2 ms-1">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="me-3">
+                                <h4 class="nav-heading fs-md mb-1"><a class="fw-medium" href="shop-single.html">Wireless Bluetooth Headset</a></h4>
+                                <div class="d-flex align-items-center fs-sm"><span class="me-2">$258.00</span><span class="me-2">x</span>
+                                    <input class="form-control form-control-sm px-2" type="number" style="max-width: 3.5rem;" min="1" value="1">
+                                </div>
+                            </div>
+                            <div class="ps-3 border-start"><a class="d-block text-danger text-decoration-none fs-xl" href="#" data-bs-toggle="tooltip" title="Remove"><i class="ai-x-circle"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="offcanvas-footer d-block border-top px-4 mb-2">
+                <div class="d-flex justify-content-between mb-4"><span>Total:</span><span class="h6 mb-0">$776.99</span></div><a class="btn btn-primary btn-sm d-block w-100" href="checkout.html"><i class="ai-credit-card fs-base me-2"></i>Checkout</a>
+            </div>
+        </div>
+        <!-- Navbar (Solid background + shadow)-->
+        <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
+        <header class="header">
+            <div class="topbar topbar-dark bg-dark">
+                <div class="container d-md-flex align-items-center px-0 px-xl-3">
+                    <div class="d-md-block text-nowrap me-3"><i class="ai-phone fs-base text-muted me-1 align-middle"></i><span class="text-muted me-2">Liên hệ</span><a class="topbar-link me-1" href="tel:9107848015">910-784-8015</a></div>
+                    <div class="d-none d-md-blockd-flex text-md-end ms-md-auto"><a class="topbar-link pe-2 me-4 " href="order-tracking.html"><i class="ai-facebook fs-base opacity-60 me-1 align-middle"></i>Hoang Linh Nhi LTD</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="navbar navbar-expand-lg navbar-light bg-light navbar-shadow navbar-sticky" data-scroll-header data-fixed-element>
+                <div class="navbar-search bg-light">
+                    <div class="container d-flex flex-nowrap align-items-center"><i class="ai-search fs-xl"></i>
+                        <input class="form-control form-control-xl navbar-search-field" type="text" placeholder="Search site">
+                        <div class="d-none d-sm-block flex-shrink-0 ps-2 me-4 border-start border-end" style="width: 10rem;">
+                            <select class="form-select ps-2 pe-0">
+                  <option value="all">All categories</option>
+                  <option value="clothing">Clothing</option>
+                  <option value="shoes">Shoes</option>
+                  <option value="electronics">Electronics</option>
+                  <option value="accessoriies">Accessories</option>
+                  <option value="software">Software</option>
+                  <option value="automotive">Automotive</option>
+                </select>
+                        </div>
+                        <div class="d-flex align-items-center"><span class="text-muted fs-xs d-none d-sm-inline">Close</span>
+                            <button class="btn-close p-2" type="button" data-bs-toggle="search"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container px-0 px-xl-3">
+                    <button class="navbar-toggler ms-n2 me-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#primaryMenu"><span class="navbar-toggler-icon"></span></button>
+                    <a class="navbar-brand flex-shrink-0 order-lg-1 mx-auto ms-lg-0 pe-lg-2 me-lg-4" href="index.html"><img class="d-none d-lg-block" src="img/logo/logo-hln.svg" alt="Hoang Linh Nhi" width="100"><img class="d-lg-none" src="img/logo/logo-hln.svg" alt="Hoang Linh Nhi" width="58"></a>
+                    <div class="d-flex align-items-center order-lg-3 ms-lg-auto">
+                        <div class="navbar-tool"><a class="navbar-tool-icon-box me-2" href="#" data-bs-toggle="search"><i class="ai-search"></i></a></div>
+                        <div class="navbar-tool d-none d-sm-flex"><a class="navbar-tool-icon-box me-2" href="#modal-signin" data-bs-toggle="modal" data-view="#modal-signin-view"><i class="ai-user"></i></a></div>
+                        <div class="border-start me-2" style="height: 30px;"></div>
+                        <div class="navbar-tool me-2"><a class="navbar-tool-icon-box" href="#" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart"><i class="ai-shopping-cart"></i><span class="navbar-tool-badge">3</span></a></div>
+                    </div>
+                    <div class="offcanvas offcanvas-collapse order-lg-2" id="primaryMenu">
+                        <div class="offcanvas-header navbar-shadow">
+                            <h5 class="mt-1 mb-0">Menu</h5>
+                            <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <!-- Menu-->
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link fw-bold" href="index.html">Trang chủ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fw-bold" href="about.html">Về HLN</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fw-bold" href="product.html">Sản phẩm</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fw-bold" href="service.html">Dịch vụ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fw-bold" href="contact.html">Liên hệ</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="offcanvas-footer border-top"><a class="btn btn-translucent-primary d-block w-100" href="#modal-signin" data-bs-toggle="modal" data-view="#modal-signin-view"><i class="ai-user fs-lg me-2"></i>Sign in</a></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Page content-->
+        <section class="position-relative">
+            <!-- Controls position: Dots outside + Arrows inside -->
+            <div class="tns-carousel-wrapper tns-controls-inside">
+                <div class="tns-carousel-inner" data-carousel-options='{"gutter": 15}'>
+                    <div>
+                        <img class="home-slider" src="img/slider/1.jpg" alt="Image" />
+                    </div>
+                    <div>
+                        <img class="home-slider" src="img/slider/2.jpg" alt="Image" />
+                    </div>
+                    <div>
+                        <img class="home-slider" src="img/slider/c72bff574e0a8454dd1b.jpg" alt="Image" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <h2 class="text-center text-dark mb-4 pt-lg-6 pt-5 text-uppercase">Chào mừng quý khách đến với</br>CÔNG TNHH hoàng linh nhi </h2>
+        <section class="container position-relative zindex-5 pt-lg-6 pt-5">
+            <div class="bg-light rounded-3 shadow px-md-0">
+                <div class="row align-items-center py-md-0">
+                    <div class="col-md-6"><img alt="Responsive Web Design" class="d-block mx-auto rounded-3" src="img/images/z3023999175917_97269b9404ffb88030b77eece1433722.jpg"></div>
+                    <div class="col-xl-5 col-lg-6 col-md-7 text-center text-md-start pt-3">
+                        <h2 class="text-dark pb-3 pb-md-0 text-uppercase">GIỚI THIỆU VỀ HOÀNG LINH NHI LTD</h2>
+                        <p class="sub-text-title">Restaurant. Business. Suplier</p>
+                        <p>Find aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum beatae vitae dicta
+                            sunt explicabo.</p>
+                        <p class="mb-0">Ornare aenean euismod elementum nisi quis. Et ultrices neque ornare aenean euismod elementum nisi.</p>
+                        <span class="button-more">
+                                  <div class="btn moreBtn">
+                                      <a href="about.html">
+                                          <span>Đọc thêm...</span>
+                        </a>
+                    </div>
+                    </span>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- Services -->
+        <section class="container my-4 my-sm-0 pt-6 pt-5">
+            <h2 class="text-center text-dark text-uppercase mb-4 background-bottom">LĨNH VỰC HOẠT ĐỘNG</h2>
+            <div class="row">
+                <!-- Item-->
+                <div class="col-lg-4 col-md-4 col-sm-6 mb-grid-gutter">
+                    <div class="card card-service card-hover">
+                        <div class="card-img-service">
+                            <a class="card-img-top" href="shop-single.html"><img alt="Product thumbnail" src="https://image.vtc.vn/files/f2/2015/10/02/an-toan-cho-cong-nhan-nganh-che-bien-thuc-pham-1.jpg"></a>
+                        </div>
+                        <div class="card-body">
+                            <h2 class="fs-xl fw-medium mb-2">
+                                <a class="meta-link text-uppercase" href="shop-single.html">Chế biến, sản xuất thực phẩm</a>
+                            </h2>
+                            <p class="card-content-service">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, tempore, suscipit possimus autem, ad aut at modi debitis libero necessitatibus atque temporibus repellat in itaque? Necessitatibus qui accusantium quas placeat!</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="">
+                                  <div class="service-more">
+                                      <a href="about.html">
+                                          <span>Đọc thêm...</span>
+                            </a>
+                        </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- Item-->
+            <div class="col-lg-4 col-md-4 col-sm-6 mb-grid-gutter">
+                <div class="card card-service card-hover">
+                    <div class="card-img-service">
+                        <a class="card-img-top" href="shop-single.html"><img alt="Product thumbnail" src="http://webdamcuoi.com/wp-content/uploads/2021/01/chao-ban-1024x637.jpg"></a>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="fs-xl fw-medium mb-2">
+                            <a class="meta-link text-uppercase" href="shop-single.html">Tư vấn trọn gói tiệc cưới hỏi, liên hoan, hội nghị</a>
+                        </h2>
+                        <p class="card-content-service">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, tempore, suscipit possimus autem, ad aut at modi debitis libero necessitatibus atque temporibus repellat in itaque? Necessitatibus qui accusantium quas placeat!</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="">
+                                  <div class="service-more">
+                                      <a href="about.html">
+                                          <span>Đọc thêm...</span>
+                        </a>
+                    </div>
+                    </span>
+                </div>
+            </div>
+            </div>
+            <!-- Item-->
+            <div class="col-lg-4 col-md-4 col-sm-6 mb-grid-gutter">
+                <div class="card card-service card-hover">
+                    <div class="card-img-service">
+                        <a class="card-img-top" href="shop-single.html"><img alt="Product thumbnail" src="https://toplist.vn/images/800px/cong-ty-cung-cap-thuc-pham-dong-lanh-uy-tin-nhat-viet-nam-231668.jpg"></a>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="fs-xl fw-medium mb-2">
+                            <a class="meta-link text-uppercase" href="shop-single.html">Bán buôn, bán lẻ thực phẩm đông lạnh</a>
+                        </h2>
+                        <p class="card-content-service">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, tempore, suscipit possimus autem, ad aut at modi debitis libero necessitatibus atque temporibus repellat in itaque? Necessitatibus qui accusantium quas placeat!</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="">
+                                  <div class="service-more">
+                                      <a href="about.html">
+                                          <span>Đọc thêm...</span>
+                        </a>
+                    </div>
+                    </span>
+                </div>
+            </div>
+            </div>
+            <!-- Item-->
+            <div class="col-lg-4 col-md-4 col-sm-6 mb-grid-gutter">
+                <div class="card card-service card-hover">
+                    <div class="card-img-service">
+                        <a class="card-img-top" href="shop-single.html"><img alt="Product thumbnail" src="https://noithatphacach.com/wp-content/uploads/2018/04/thiet-ke-thi-cong-noi-that-nha-hang02.jpg"></a>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="fs-xl fw-medium mb-2">
+                            <a class="meta-link text-uppercase" href="shop-single.html">Tư vấn, thiết kế, thi công, set up nhà hàng</a>
+                        </h2>
+                        <p class="card-content-service">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, tempore, suscipit possimus autem, ad aut at modi debitis libero necessitatibus atque temporibus repellat in itaque? Necessitatibus qui accusantium quas placeat!</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="">
+                                  <div class="service-more">
+                                      <a href="about.html">
+                                          <span>Đọc thêm...</span>
+                        </a>
+                    </div>
+                    </span>
+                </div>
+            </div>
+            </div>
+            <!-- Item-->
+            <div class="col-lg-4 col-md-4 col-sm-6 mb-grid-gutter">
+                <div class="card card-service card-hover">
+                    <div class="card-img-service">
+                        <a class="card-img-top" href="shop-single.html"><img alt="Product thumbnail" src="https://www.bep36.net/wp-content/uploads/2017/09/suat-an-cong-nghiep-bep36-1024x680.jpg"></a>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="fs-xl fw-medium mb-2">
+                            <a class="meta-link text-uppercase" href="shop-single.html">Cung cấp suất ăn công nghiệp cho nhà máy, trường học</a>
+                        </h2>
+                        <p class="card-content-service">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, tempore, suscipit possimus autem, ad aut at modi debitis libero necessitatibus atque temporibus repellat in itaque? Necessitatibus qui accusantium quas placeat!</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="">
+                                  <div class="service-more">
+                                      <a href="about.html">
+                                          <span>Đọc thêm...</span>
+                        </a>
+                    </div>
+                    </span>
+                </div>
+            </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 mb-grid-gutter">
+                <div class="card card-service card-hover">
+                    <div class="card-img-service">
+                        <a class="card-img-top" href="shop-single.html"><img alt="Product thumbnail" src="https://image.freepik.com/free-vector/neon-style-coming-soon-glowing-background-design_1017-25516.jpg"></a>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="fs-xl fw-medium mb-2">
+                            <a class="meta-link text-uppercase" href="shop-single.html">Dịch vụ sắp ra mắt</a>
+                        </h2>
+                        <p class="card-content-service">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, tempore, suscipit possimus autem, ad aut at modi debitis libero necessitatibus atque temporibus repellat in itaque? Necessitatibus qui accusantium quas placeat!</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="">
+                                  <div class="service-more">
+                                      <a href="about.html">
+                                          <span>Đọc thêm...</span>
+                        </a>
+                    </div>
+                    </span>
+                </div>
+            </div>
+            </div>
+            </div>
+        </section>
+        <!-- Product-->
+        <section class="container pt-5 mt-3 mt-md-0 pt-md-6 pt-lg-7 pb-md-4">
+            <h2 class="text-dark text-center mb-5 text-uppercase">Sản phẩm của chúng tôi</h2>
+            <div class="tns-carousel-wrapper">
+                <div class="tns-carousel-inner" data-carousel-options="{&quot;items&quot;: 2, &quot;controls&quot;: false, &quot;nav&quot;: true, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:1, &quot;gutter&quot;: 16},&quot;500&quot;:{&quot;items&quot;:2, &quot;gutter&quot;: 16}, &quot;780&quot;:{&quot;items&quot;:3, &quot;gutter&quot;: 16}, &quot;1000&quot;:{&quot;items&quot;:4, &quot;gutter&quot;: 23}}}">
+                    <!-- Item-->
+                    <div class="pb-2">
+                        <div class="card card-product card-hover mx-1">
+                            <a class="card-img-top" href="#"><img src="img/products/changaluoc.jpg" alt="Product thumbnail"></a>
+                            <div class="card-body"><a class="meta-link fs-xs mb-1" href="#">Chicken</a>
+                                <h3 class="fs-md fw-medium mb-2"><a class="meta-link" href="#">Chân gà</a></h3><span class="text-heading fw-semibold">110.000đ/kg</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="star-rating mt-n1"><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star"></i>
+                                </div>
+                                <div class="d-flex align-items-center"><a class="btn-wishlist" href="#"><i class="ai-heart"></i><span class="btn-tooltip">Yêu thích</span></a><span class="btn-divider"></span><a class="btn-addtocart" href="#"><i class="ai-shopping-cart"></i><span class="btn-tooltip">Thêm vào giỏ hàng</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item-->
+                    <div class="pb-2">
+                        <div class="card card-product card-hover mx-1"><span class="badge badge-floating badge-pill badge-danger">Sale</span>
+                            <a class="card-img-top" href="#"><img src="img/products/gahaplachanh.jpg" alt="Product thumbnail"></a>
+                            <div class="card-body"><a class="meta-link fs-xs mb-1" href="#">Chicken</a>
+                                <h3 class="fs-md fw-medium mb-2"><a class="meta-link" href="#">Gà hấp là chanh</a></h3>
+                                <del class="fs-sm text-muted me-1">200.000đ</del><span class="text-heading fw-semibold">180.000đ/con</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="star-rating mt-n1"><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star"></i><i class="sr-star ai-star"></i>
+                                </div>
+                                <div class="d-flex align-items-center"><a class="btn-wishlist" href="#"><i class="ai-heart"></i><span class="btn-tooltip">Yêu thích</span></a><span class="btn-divider"></span><a class="btn-addtocart" href="#"><i class="ai-shopping-cart"></i><span class="btn-tooltip">Thêm vào giỏ hàng</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item-->
+                    <div class="pb-2">
+                        <div class="card card-product card-hover mx-1">
+                            <a class="card-img-top" href="#"><img src="img/products/galuoc.jpg" alt="Product thumbnail"></a>
+                            <div class="card-body"><a class="meta-link fs-xs mb-1" href="#">Chicken</a>
+                                <h3 class="fs-md fw-medium mb-2"><a class="meta-link" href="#">Gà hấp</a></h3><span class="text-heading fw-semibold">180.000đ/con</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="star-rating mt-n1"><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i>
+                                </div>
+                                <div class="d-flex align-items-center"><a class="btn-wishlist" href="#"><i class="ai-heart"></i><span class="btn-tooltip">Yêu thích</span></a><span class="btn-divider"></span><a class="btn-addtocart" href="#"><i class="ai-shopping-cart"></i><span class="btn-tooltip">Thêm vào giỏ hàng</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item-->
+                    <div class="pb-2">
+                        <div class="card card-product card-hover mx-1">
+                            <a class="card-img-top" href="#"><img src="img/products/gamuoitieu.jpg" alt="Product thumbnail"></a>
+                            <div class="card-body"><a class="meta-link fs-xs mb-1" href="#">Chicken</a>
+                                <h3 class="fs-md fw-medium mb-2"><a class="meta-link" href="#">Gà ủ muối tiêu</a></h3><span class="text-heading fw-semibold">190.000đ/con</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="star-rating mt-n1"><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star"></i>
+                                </div>
+                                <div class="d-flex align-items-center"><a class="btn-wishlist" href="#"><i class="ai-heart"></i><span class="btn-tooltip">Yêu thích</span></a><span class="btn-divider"></span><a class="btn-addtocart" href="#"><i class="ai-shopping-cart"></i><span class="btn-tooltip">Thêm vào giỏ hàng</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item-->
+                    <div class="pb-2">
+                        <div class="card card-product card-hover mx-1"><span class="badge badge-floating badge-pill badge-danger">Giảm giá</span>
+                            <a class="card-img-top" href="#"><img src="img/products/ganuong.jpg" alt="Product thumbnail"></a>
+                            <div class="card-body"><a class="meta-link fs-xs mb-1" href="#">Chicken</a>
+                                <h3 class="fs-md fw-medium mb-2"><a class="meta-link" href="#">Gà nướng</a></h3>
+                                <del class="fs-sm text-muted me-1">220.000đ</del><span class="text-heading fw-semibold">200.000đ/con</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="star-rating mt-n1"><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star"></i>
+                                </div>
+                                <div class="d-flex align-items-center"><a class="btn-wishlist" href="#"><i class="ai-heart"></i><span class="btn-tooltip">Yêu thích</span></a><span class="btn-divider"></span><a class="btn-addtocart" href="#"><i class="ai-shopping-cart"></i><span class="btn-tooltip">Thêm vào giỏ hàng</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span class="button-more">
+                            <div class="btn moreBtn">
+                                <a href="about.html">
+                                    <span>Xem thêm...</span>
+                </a>
+            </div>
+            </span>
+            </div>
+        </section>
+        <section class="container pt-5 mt-3 mt-md-0 pt-md-6 pt-lg-7 pb-md-4">
+            <h2 class="mb-5 text-center text-uppercase">Thương hiệu của chúng tôi</h2>
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter">
+                    <a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+                        <div class="card-body px-1 py-0 text-center">
+                            <div class="swap-image"><img class="swap-to" src="img/brand/sieuthisapa_color.svg" alt="Brand logo" width="150"><img class="swap-from" src="img/brand/sieuthisapa_grey.svg" alt="Brand logo" width="150"></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter">
+                    <a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+                        <div class="card-body px-1 py-0 text-center">
+                            <div class="swap-image"><img class="swap-to" src="img/brand/bepxua_color.svg" alt="Brand logo" width="150"><img class="swap-from" src="img/brand/bepxua_grey.svg" alt="Brand logo" width="150"></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter">
+                    <a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+                        <div class="card-body px-1 py-0 text-center">
+                            <div class="swap-image"><img class="swap-to" src="img/brand/beptrenmay_color.svg" alt="Brand logo" width="150"><img class="swap-from" src="img/brand/beptrenmay_grey.svg" alt="Brand logo" width="150"></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter">
+                    <a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+                        <div class="card-body px-1 py-0 text-center">
+                            <div class="swap-image"><img class="swap-to" src="img/brand/huanfood_color.svg" alt="Brand logo" width="150"><img class="swap-from" src="img/brand/huanfood_grey.svg" alt="Brand logo" width="150"></div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- New arrivals (widget) + Promo banner-->
+        <!-- <section class="container pt-5 mt-3 mt-md-0 pt-md-6 pt-lg-7">
+            <div class="row">
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="card h-100 p-4">
+                        <div class="p-2">
+                            <div class="d-flex justify-content-between align-items-center mb-4 pb-1">
+                                <h3 class="fs-xl mb-0">New arrivals</h3><a class="fs-sm fw-medium me-n2" href="shop-ls.html">View more<i
+                                class="ai-chevron-right fs-lg ms-1 align-middle"></i></a>
+                            </div>
+                            <div class="d-flex align-items-center pb-2 mb-1">
+                                <a class="d-block flex-shrink-0" href="#"><img alt="Product" class="rounded" src="img/demo/shop-homepage/thumbnails/04.jpg" width="60"></a>
+                                <div class="ps-2 ms-1">
+                                    <h4 class="fs-md nav-heading mb-1"><a class="fw-medium" href="#">Block-colored Hooded
+                                    Top</a></h4>
+                                    <p class="fs-sm mb-0">$27.50</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center pb-2 mb-1">
+                                <a class="d-block flex-shrink-0" href="#"><img alt="Product" class="rounded" src="img/demo/shop-homepage/thumbnails/05.jpg" width="60"></a>
+                                <div class="ps-2 ms-1">
+                                    <h4 class="fs-md nav-heading mb-1"><a class="fw-medium" href="#">Smart Watch Series
+                                    5</a></h4>
+                                    <p class="fs-sm mb-0">$364.99</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center pb-2 mb-1">
+                                <a class="d-block flex-shrink-0" href="#"><img alt="Product" class="rounded" src="img/demo/shop-homepage/thumbnails/02.jpg" width="60"></a>
+                                <div class="ps-2 ms-1">
+                                    <h4 class="fs-md nav-heading mb-1"><a class="fw-medium" href="#">Running Sneakers,
+                                    Collection</a></h4>
+                                    <p class="fs-sm mb-0">$145.00</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <a class="d-block flex-shrink-0" href="#"><img alt="Product" class="rounded" src="img/demo/shop-homepage/thumbnails/06.jpg" width="60"></a>
+                                <div class="ps-2 ms-1">
+                                    <h4 class="fs-md nav-heading mb-1"><a class="fw-medium" href="#">Bluetooth Headset</a>
+                                    </h4>
+                                    <p class="fs-sm mb-0">$258.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="bg-secondary rounded-3 pt-5 px-3 ps-sm-5 pe-sm-2">
+                        <div class="d-sm-flex align-items-end text-center text-sm-start ps-2">
+                            <div class="me-sm-n6 pb-5">
+                                <h2 class="h1 text-sm-nowrap">Virtual Reality</h2>
+                                <p class="pb-2 mx-auto mx-sm-0" style="max-width: 14rem;">Gadgets from top brands at discounted price</p>
+                                <div class="d-inline-block bg-faded-danger text-danger fs-sm fw-medium rounded-1 px-3 py-2">
+                                    Limited time offer
+                                </div>
+                                <div class="countdown pt-3 h4 justify-content-center justify-content-sm-start" data-countdown="10/01/2021 07:00:00 PM">
+                                    <div class="countdown-days"><span class="countdown-value">0</span><span class="countdown-label fs-xs text-muted">Days</span></div>
+                                    <div class="countdown-hours"><span class="countdown-value">0</span><span class="countdown-label fs-xs text-muted">Hours</span></div>
+                                    <div class="countdown-minutes"><span class="countdown-value">0</span><span class="countdown-label fs-xs text-muted">Mins</span></div>
+                                </div>
+                                <a class="btn btn-primary" href="#">Get one now</a>
+                            </div>
+                            <div><img alt="Promo banner" src="img/demo/shop-homepage/banner.png"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section class="container pt-5 mt-3 mt-md-0 pt-md-6 pt-lg-7 pb-md-4">
+            <h2 class="mb-5 text-center">Shop by brand</h2>
+            <div class="row">
+                <div class="tns-carousel-wrapper tns-nav-outside">
+                    <div class="tns-carousel-inner tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal" data-carousel-options='{
+                        "nav": false,
+                        "controls": false,
+                        "autoplay": true,
+                        "autoplayTimeout": 4000,
+                        "responsive": {
+                          "0": {
+                            "items": 2
+                          },
+                          "576": {
+                            "items": 3
+                          },
+                          "768": {
+                            "items": 4
+                          },
+                          "992": {
+                            "items": 5
+                          },
+                          "1200": {
+                            "items": 6
+                          }
+                        }
+                      }'>
+                        <div class="partner-logo tns-item">
+                            <img class="img-partner" src="img/partner/coopmart.png" alt="Image" />
+                        </div>
+                        <div class="partner-logo tns-item">
+                            <img class="img-partner" src="img/partner/lanchi.png" alt="Image" />
+                        </div>
+                        <div class="partner-logo tns-item">
+                            <img class="img-partner" src="img/partner/lotte mart.png" alt="Image" />
+                        </div>
+                        <div class="partner-logo">
+                            <img class="img-partner" src="img/partner/aeonmall.png" alt="Image" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Reviews-->
+        <section class="bg-secondary py-5 py-md-6 mt-4 mt-md-5">
+            <div class="container-fluid py-3 py-md-0">
+                <h2 class="mb-5 text-center">Trusted reviews</h2>
+                <div class="tns-carousel-wrapper">
+                    <div class="tns-carousel-inner" data-carousel-options="{&quot;items&quot;: 2, &quot;controls&quot;: false, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:1, &quot;gutter&quot;: 16}, &quot;520&quot;:{&quot;items&quot;:2, &quot;gutter&quot;: 12}, &quot;860&quot;:{&quot;items&quot;:3, &quot;gutter&quot;: 23}, &quot;1080&quot;:{&quot;items&quot;:4, &quot;gutter&quot;: 23}, &quot;1380&quot;:{&quot;items&quot;:5, &quot;gutter&quot;: 23}, &quot;1600&quot;:{&quot;items&quot;:6, &quot;gutter&quot;: 23}}}">
+                        <!-- Review Card-->
+                        <div class="py-2">
+                            <div class="card h-100 border-0 shadow mx-1">
+                                <div class="card-body">
+                                    <a class="d-flex align-items-center nav-heading mb-3" href="#"><img alt="Product thumb" src="img/demo/shop-homepage/thumbnails/01.jpg" width="60">
+                                        <div class="fs-md fw-medium ps-2 ms-1">Outdoor HD Cloud Security Camera</div>
+                                    </a>
+                                    <div class="mb-2 pb-1 star-rating mt-n1"><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star"></i>
+                                    </div>
+                                    <p class="fs-sm mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices.
+                                    </p>
+                                </div>
+                                <footer class="fs-sm px-4 pb-4">
+                                    <div class="d-flex align-items-center border-top mb-n2 pt-3"><img alt="Emma Brown" class="rounded-circle" src="img/testimonials/01.jpg" width="42">
+                                        <div class="text-heading fw-medium ps-2 ms-1 mt-n1">Emma Brown</div>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div>
+                        <!-- From Instagram-->
+                        <div class="py-2"><a class="card h-100 border-0 shadow mx-1" href="#"><span
+                            class="card-floating-icon"><i class="ai-instagram"></i></span><img alt="Image"
+                                                                                               class="card-img-top"
+                                                                                               src="img/demo/shop-homepage/instagram/01.jpg">
+                        <footer class="fs-sm mt-auto py-2 px-4">
+                            <div class="d-flex align-items-center py-2"><img alt="@morni.janeffel"
+                                                                             class="rounded-circle"
+                                                                             src="img/testimonials/02.jpg" width="42">
+                                <div class="text-heading fw-medium ps-2 ms-1 mt-n1">@morni.janeffel</div>
+                            </div>
+                        </footer>
+                    </a></div>
+                        <!-- Review Card-->
+                        <div class="py-2">
+                            <div class="card h-100 border-0 shadow mx-1">
+                                <div class="card-body">
+                                    <a class="d-flex align-items-center nav-heading mb-3" href="#"><img alt="Product thumb" src="img/demo/shop-homepage/thumbnails/02.jpg" width="60">
+                                        <div class="fs-md fw-medium ps-2 ms-1">Running Sneakers, Sports Collection</div>
+                                    </a>
+                                    <div class="mb-2 pb-1 star-rating mt-n1"><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i>
+                                    </div>
+                                    <p class="fs-sm mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices.
+                                    </p>
+                                </div>
+                                <footer class="fs-sm px-4 pb-4">
+                                    <div class="d-flex align-items-center border-top mb-n2 pt-3"><img alt="Edward Chew" class="rounded-circle" src="img/testimonials/06.jpg" width="42">
+                                        <div class="text-heading fw-medium ps-2 ms-1 mt-n1">Edward Chew</div>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div>
+                        <!-- From Instagram-->
+                        <div class="py-2"><a class="card h-100 border-0 shadow mx-1" href="#"><span
+                            class="card-floating-icon"><i class="ai-instagram"></i></span><img alt="Image"
+                                                                                               class="card-img-top"
+                                                                                               src="img/demo/shop-homepage/instagram/02.jpg">
+                        <footer class="fs-sm mt-auto py-2 px-4">
+                            <div class="d-flex align-items-center py-2"><img alt="@jane.palson"
+                                                                             class="rounded-circle"
+                                                                             src="img/testimonials/09.jpg" width="42">
+                                <div class="text-heading fw-medium ps-2 ms-1 mt-n1">@jane.palson</div>
+                            </div>
+                        </footer>
+                    </a></div>
+                        <!-- Review Card-->
+                        <div class="py-2">
+                            <div class="card h-100 border-0 shadow mx-1">
+                                <div class="card-body">
+                                    <a class="d-flex align-items-center nav-heading mb-3" href="#"><img alt="Product thumb" src="img/demo/shop-homepage/thumbnails/06.jpg" width="60">
+                                        <div class="fs-md fw-medium ps-2 ms-1">Wireless Bluetooth Headset</div>
+                                    </a>
+                                    <div class="mb-2 pb-1 star-rating mt-n1"><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star"></i>
+                                    </div>
+                                    <p class="fs-sm mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices.
+                                    </p>
+                                </div>
+                                <footer class="fs-sm px-4 pb-4">
+                                    <div class="d-flex align-items-center border-top mb-n2 pt-3"><img alt="Tim Brooks" class="rounded-circle" src="img/testimonials/03.jpg" width="42">
+                                        <div class="text-heading fw-medium ps-2 ms-1 mt-n1">Tim Brooks</div>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div>
+                        <!-- From Instagram-->
+                        <div class="py-2"><a class="card h-100 border-0 shadow mx-1" href="#"><span
+                            class="card-floating-icon"><i class="ai-instagram"></i></span><img alt="Image"
+                                                                                               class="card-img-top"
+                                                                                               src="img/demo/shop-homepage/instagram/03.jpg">
+                        <footer class="fs-sm mt-auto py-2 px-4">
+                            <div class="d-flex align-items-center py-2"><img alt="@sarah.cole"
+                                                                             class="rounded-circle"
+                                                                             src="img/testimonials/05.jpg" width="42">
+                                <div class="text-heading fw-medium ps-2 ms-1 mt-n1">@sarah.cole</div>
+                            </div>
+                        </footer>
+                    </a></div>
+                        <!-- Review Card-->
+                        <div class="py-2">
+                            <div class="card h-100 border-0 shadow mx-1">
+                                <div class="card-body">
+                                    <a class="d-flex align-items-center nav-heading mb-3" href="#"><img alt="Product thumb" src="img/demo/shop-homepage/thumbnails/04.jpg" width="60">
+                                        <div class="fs-md fw-medium ps-2 ms-1">Block-colored Hooded Top</div>
+                                    </a>
+                                    <div class="mb-2 pb-1 star-rating mt-n1"><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star"></i>
+                                    </div>
+                                    <p class="fs-sm mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices.
+                                    </p>
+                                </div>
+                                <footer class="fs-sm px-4 pb-4">
+                                    <div class="d-flex align-items-center border-top mb-n2 pt-3"><img alt="Michael Smith" class="rounded-circle" src="img/testimonials/04.jpg" width="42">
+                                        <div class="text-heading fw-medium ps-2 ms-1 mt-n1">Michael Smith</div>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div>
+                        <!-- From Instagram-->
+                        <div class="py-2"><a class="card h-100 border-0 shadow mx-1" href="#"><span
+                            class="card-floating-icon"><i class="ai-instagram"></i></span><img alt="Image"
+                                                                                               class="card-img-top"
+                                                                                               src="img/demo/shop-homepage/instagram/04.jpg">
+                        <footer class="fs-sm mt-auto py-2 px-4">
+                            <div class="d-flex align-items-center py-2"><img alt="@morni.janeffel"
+                                                                             class="rounded-circle"
+                                                                             src="img/testimonials/02.jpg" width="42">
+                                <div class="text-heading fw-medium ps-2 ms-1 mt-n1">@morni.janeffel</div>
+                            </div>
+                        </footer>
+                    </a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer-->
+    <footer class="footer bg-dark pt-5 pt-md-6">
+        <div class="container pt-3 pb-0 pt-md-0 pb-md-3">
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <div class="widget widget-light pb-2 mb-4">
+                        <h4 class="widget-title">Shop departments</h4>
+                        <ul>
+                            <li><a class="widget-link" href="#">Closing</a></li>
+                            <li><a class="widget-link" href="#">Shoes</a></li>
+                            <li><a class="widget-link" href="#">Electronics</a></li>
+                            <li><a class="widget-link" href="#">Accessories</a></li>
+                            <li><a class="widget-link" href="#">Software</a></li>
+                            <li><a class="widget-link" href="#">Automotive</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="widget widget-light pb-2 mb-4">
+                        <h4 class="widget-title">Customer zone</h4>
+                        <ul>
+                            <li><a class="widget-link" href="#">Your account</a></li>
+                            <li><a class="widget-link" href="#">Shipping rates &amp; policies</a></li>
+                            <li><a class="widget-link" href="#">Refunds &amp; replacements</a></li>
+                            <li><a class="widget-link" href="#">Order tracking</a></li>
+                            <li><a class="widget-link" href="#">Delivery info</a></li>
+                            <li><a class="widget-link" href="#">Taxes &amp; fees</a></li>
+                            <li><a class="widget-link" href="#">News</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="widget widget-light pb-3 mb-4" style="max-width: 24rem;">
+                        <h3 class="widget-title">Stay informed</h3>
+                        <form action="https://studio.us12.list-manage.com/subscribe/post?u=c7103e2c981361a6639545bd5&amp;amp;id=29ca296126" class="subscription-form validate" method="post" name="mc-embedded-subscribe-form" novalidate target="_blank">
+                            <div class="input-group flex-nowrap"><i class="ai-mail position-absolute top-50 translate-middle-y text-muted fs-base ms-3"></i>
+                                <input class="form-control rounded-start" name="EMAIL" placeholder="Your email" required type="email">
+                                <button class="btn btn-primary" name="subscribe" type="submit">Subscribe*</button>
+                            </div>
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                                <input class="subscription-form-antispam" name="b_c7103e2c981361a6639545bd5_29ca296126" tabindex="-1" type="text">
+                            </div>
+                            <div class="form-text">*Subscribe to our newsletter to receive early discount offers, updates and new products info.
+                            </div>
+                            <div class="subscription-status"></div>
+                        </form>
+                    </div>
+                    <div class="widget widget-light pt-1 mb-4">
+                        <h4 class="widget-title">Download our app</h4>
+                        <div class="d-flex flex-wrap pt-1"><a class="btn-market btn-outline btn-apple me-3 mb-3" href="#" role="button"><span class="btn-market-subtitle">Download on the</span><span
+                            class="btn-market-title">App Store</span></a><a class="btn-market btn-outline btn-google mb-3" href="#" role="button"><span
+                            class="btn-market-subtitle">Download on the</span><span
+                            class="btn-market-title">Google Play</span></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-darker pt-2">
+            <div class="container py-sm-3">
+                <div class="row pb-4 mb-2 pt-5 py-md-5">
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="d-flex align-items-center"><i class="ai-truck text-primary" style="font-size: 2.125rem;"></i>
+                            <div class="ps-3">
+                                <h6 class="fs-base text-light mb-1">Fast and free delivery</h6>
+                                <p class="mb-0 fs-xs text-light opacity-50">Free delivery for all orders over $200</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="d-flex align-items-center"><i class="ai-refresh-cw text-primary" style="font-size: 2.125rem;"></i>
+                            <div class="ps-3">
+                                <h6 class="fs-base text-light mb-1">Money back guarantee</h6>
+                                <p class="mb-0 fs-xs text-light opacity-50">We return money within 30 days</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="d-flex align-items-center"><i class="ai-life-buoy text-primary" style="font-size: 2.125rem;"></i>
+                            <div class="ps-3">
+                                <h6 class="fs-base text-light mb-1">24/7 customer support</h6>
+                                <p class="mb-0 fs-xs text-light opacity-50">Friendly 24/7 customer support</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="d-flex align-items-center"><i class="ai-credit-card text-primary" style="font-size: 2.125rem;"></i>
+                            <div class="ps-3">
+                                <h6 class="fs-base text-light mb-1">Secure online payment</h6>
+                                <p class="mb-0 fs-xs text-light opacity-50">We possess SSL / Secure сertificate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="hr-light my-0 mb-5">
+                <div class="d-sm-flex align-items-center mb-4 pb-3">
+                    <div class="d-flex flex-wrap align-items-center me-3">
+                        <a class="d-block me-grid-gutter mt-n1 mb-3" href="index.html" style="width: 108px;"><img alt="Around" src="img/logo/logo-footer.png"></a>
+                        <ul class="list-inline fs-sm pt-2 mb-3">
+                            <li class="list-inline-item"><a class="nav-link-style nav-link-light" href="#">About</a></li>
+                            <li class="list-inline-item"><a class="nav-link-style nav-link-light" href="#">Outlets</a></li>
+                            <li class="list-inline-item"><a class="nav-link-style nav-link-light" href="#">Affiliates</a>
+                            </li>
+                            <li class="list-inline-item"><a class="nav-link-style nav-link-light" href="#">Support</a></li>
+                            <li class="list-inline-item"><a class="nav-link-style nav-link-light" href="#">Terms of use</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="d-flex pt-2 pt-sm-0 ms-auto"><a class="btn-social bs-twitter bs-light me-2 mb-2" href="#"><i
+                        class="ai-twitter"></i></a><a class="btn-social bs-facebook bs-light me-2 mb-2" href="#"><i
+                        class="ai-facebook"></i></a><a class="btn-social bs-instagram bs-light me-2 mb-2" href="#"><i
+                        class="ai-instagram"></i></a><a class="btn-social bs-pinterest bs-light me-2 mb-2" href="#"><i
+                        class="ai-pinterest"></i></a><a class="btn-social bs-youtube bs-light mb-2" href="#"><i
+                        class="ai-youtube"></i></a></div>
+                </div>
+                <div class="d-sm-flex justify-content-between align-items-center pb-4 pb-sm-2">
+                    <div class="order-sm-2 mb-4 mb-sm-3"><img alt="Payment methods" src="img/footer/cards.png" width="181">
+                    </div>
+                    <div class="order-sm-1 mb-3">
+                        <p class="fs-ms mb-0"><span class="text-light opacity-50 me-1">© All rights reserved. Made by</span><a class="nav-link-style nav-link-light" href="https://createx.studio/" rel="noopener" target="_blank">Createx Studio</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Back to top button--><a class="btn-scroll-top" data-fixed-element data-scroll href="#top"><span
+        class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span><i class="btn-scroll-top-icon ai-arrow-up"> </i></a>
+    <!-- Vendor scrits: js libraries and plugins-->
+    <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+    <!-- Main theme script-->
+    <script src="js/theme.min.js"></script>
+</body>
+
+<!-- Mirrored from around.createx.studio/demo-shop-homepage.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Nov 2021 15:39:39 GMT -->
+
+</html>
