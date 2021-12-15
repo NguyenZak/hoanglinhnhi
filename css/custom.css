@@ -7,6 +7,9 @@
         h2 {
             font-size: 20px;
         }
+        .logo-footer {
+            align-items: center;
+        }
     }
     
     .button-more {
@@ -175,12 +178,13 @@
         width: 100%;
         max-width: 100%;
     }
-    /* .partner-logo {
+    
+    .partner-logo {
         display: block;
         position: relative;
     }
     
     .img-partner {
         object-fit: cover;
-        height: auto;
-    } */
+        height: 45%;
+    }
