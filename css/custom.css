@@ -10,6 +10,10 @@
         .logo-footer {
             align-items: center;
         }
+        .partner-logo {
+            width: auto;
+            height: 100px !important;
+        }
     }
     
     .button-more {
