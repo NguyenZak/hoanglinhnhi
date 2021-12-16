@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title class="text-capitalize">Công Ty TNHH Hoàng Linh Nhi</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Hoàng Linh Nhi">
+    <meta name="keywords" content="foods, chicken, thực phẩm đông lạnh, hải sản">
+    <meta name="author" content="laptrinhphp.edu.vn">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="50x50" href="img/logo/favicon-hln.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/logo/favicon-hln.svg">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Page loading styles-->
+    <style>
+        .page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all .4s .2s ease-in-out;
+            transition: all .4s .2s ease-in-out;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
+        }
+        
+        .page-loading.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity .2s ease-in-out;
+            transition: opacity .2s ease-in-out;
+            opacity: 0;
+        }
+        
+        .page-loading.active>.page-loading-inner {
+            opacity: 1;
+        }
+        
+        .page-loading-inner>span {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #737491;
+        }
+        
+        .page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: .75rem;
+            vertical-align: text-bottom;
+            border: .15em solid #766df4;
+            border-right-color: transparent;
+            border-radius: 50%;
+            -webkit-animation: spinner .75s linear infinite;
+            animation: spinner .75s linear infinite;
+        }
+        
+        @-webkit-keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+        (function() {
+            window.onload = function() {
+                var preloader = document.querySelector('.page-loading');
+                preloader.classList.remove('active');
+                setTimeout(function() {
+                    preloader.remove();
+                }, 2000);
+            };
+        })();
+    </script>
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="vendor/simplebar/dist/simplebar.min.css" />
+    <link rel="stylesheet" media="screen" href="vendor/tiny-slider/dist/tiny-slider.css" />
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="css/theme.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Google Tag Manager-->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                '../www.googletagmanager.com/gtm5445.html?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WKV3GT5');
+    </script>
+</head>
+<!-- Body-->
+
+<body>
+    <!-- Google Tag Manager (noscript)-->
+    <noscript>
+      <iframe src="http://www.googletagmanager.com/ns.html?id=GTM-WKV3GT5" height="0" width="0" style="display: none; visibility: hidden;"></iframe>
+    </noscript>
+    <!-- Page loading spinner-->
+    <div class="page-loading active">
+        <div class="page-loading-inner">
+            <img src="img/logo/logo-hln.svg" alt="" style="height:100px">
+            <br>
+            <div class=""></div><span>Loading...</span>
+        </div>
+    </div>
+    <main class="page-wrapper">
+        <!-- Sign In Modal-->
+        <div class="modal fade" id="modal-signin" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content border-0">
+                    <div class="view show" id="modal-signin-view">
+                        <div class="modal-header border-0 bg-dark px-4">
+                            <h4 class="modal-title text-light">Đăng nhập</h4>
+                            <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="btn-close "></button>
+                        </div>
+                        <div class="modal-body px-4">
+                            <p class="fs-ms text-muted">Đăng nhập bằng tài khoản đã đăng ký trên web site của chúng tôi</p>
+                            <form class="needs-validation" novalidate>
+                                <div class="mb-3">
+                                    <div class="input-group"><i class="ai-mail position-absolute top-50 start-0 translate-middle-y ms-3"></i>
+                                        <input class="form-control rounded" type="email" placeholder="Email" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="input-group"><i class="ai-lock position-absolute top-50 start-0 translate-middle-y ms-3"></i>
+                                        <div class="password-toggle w-100">
+                                            <input class="form-control" type="password" placeholder="Password" required>
+                                            <label class="password-toggle-btn" aria-label="Show/hide password">
+                          <input class="password-toggle-check" type="checkbox"><span class="password-toggle-indicator"></span>
+                        </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3 mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="keep-signed">
+                                        <label class="form-check-label fs-sm" for="keep-signed">Keep me signed in</label>
+                                    </div><a class="nav-link-style fs-ms" href="password-recovery.html">Quên mật khẩu</a>
+                                </div>
+                                <button class="btn btn-primary d-block w-100" type="submit">Đăng nhập</button>
+                                <p class="fs-sm pt-3 mb-0">Bạn chưa có tài khoản? <a href='#' class='fw-medium' data-view='#modal-signup-view'>Đăng ký</a></p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="view" id="modal-signup-view">
+                        <div class="modal-header border-0 bg-dark px-4">
+                            <h4 class="modal-title text-light">Đăng nhập</h4>
+                            <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="btn-close"></button>
+                        </div>
+                        <div class="modal-body px-4">
+                            <p class="fs-ms text-muted">Registration takes less than a minute but gives you full control over your orders.</p>
+                            <form class="needs-validation" novalidate>
+                                <div class="mb-3">
+                                    <input class="form-control" type="text" placeholder="Full name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input class="form-control" type="text" placeholder="Email" required>
+                                </div>
+                                <div class="mb-3 password-toggle">
+                                    <input class="form-control" type="password" placeholder="Password" required>
+                                    <label class="password-toggle-btn" aria-label="Show/hide password">
+                      <input class="password-toggle-check" type="checkbox"><span class="password-toggle-indicator"></span>
+                    </label>
+                                </div>
+                                <div class="mb-3 password-toggle">
+                                    <input class="form-control" type="password" placeholder="Confirm password" required>
+                                    <label class="password-toggle-btn" aria-label="Show/hide password">
+                      <input class="password-toggle-check" type="checkbox"><span class="password-toggle-indicator"></span>
+                    </label>
+                                </div>
+                                <button class="btn btn-primary d-block w-100" type="submit">Đăng ký</button>
+                                <p class="fs-sm pt-3 mb-0">Bạn đã có tài khoản? <a href='#' class='fw-medium' data-view='#modal-signin-view'>Đăng nhập</a></p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-body text-center px-4 pt-2 pb-4">
+                        <hr class="my-0">
+                        <p class="fs-sm fw-medium text-heading pt-4">Đăng nhập với</p><a class="btn-social bs-facebook bs-lg mx-1 mb-2" href="#"><i class="ai-facebook"></i></a><a class="btn-social bs-twitter bs-lg mx-1 mb-2" href="#"><i class="ai-twitter"></i></a><a class="btn-social bs-instagram bs-lg mx-1 mb-2"
+                            href="#"><i class="ai-instagram"></i></a><a class="btn-social bs-google bs-lg mx-1 mb-2" href="#"><i class="ai-google"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Shopping cart off-canvas-->
+        <div class="offcanvas offcanvas-end" id="shoppingCart">
+            <div class="offcanvas-header navbar-shadow px-4 mb-2">
+                <h5 class="mt-1 mb-0">Giỏ hàng</h5>
+                <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body p-4 flex-center" data-simplebar>
+                <div class="d-flex align-items-center mb-3">
+                    <a class="d-block flex-shrink-0" href=""><img class="rounded" src="img/products/changaluoc.jpg" alt="Product" width="60"></a>
+                    <div class="w-100 ps-2 ms-1">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="me-3">
+                                <h4 class="nav-heading fs-md mb-1"><a class="fw-medium" href="">Chân Gà Muối Cay</a></h4>
+                                <div class="d-flex align-items-center fs-sm"><span class="me-2">110.000đ</span><span class="me-2">x</span>
+                                    <input class="form-control form-control-sm px-2" type="number" style="max-width: 3.5rem;" min="1" value="1">
+                                </div>
+                            </div>
+                            <div class="ps-3 border-start"><a class="d-block text-danger text-decoration-none fs-xl" href="#" data-bs-toggle="tooltip" title="Remove"><i class="ai-x-circle"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                    <a class="d-block flex-shrink-0" href="shop-single.html"><img class="rounded" src="img/products/CA-BONG-KHO.jpg" alt="Product" width="60"></a>
+                    <div class="w-100 ps-2 ms-1">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="me-3">
+                                <h4 class="nav-heading fs-md mb-1"><a class="fw-medium" href="shop-single.html">Cá Kho</a></h4>
+                                <div class="d-flex align-items-center fs-sm"><span class="me-2">180.000đ</span><span class="me-2">x</span>
+                                    <input class="form-control form-control-sm px-2" type="number" style="max-width: 3.5rem;" min="1" value="1">
+                                </div>
+                            </div>
+                            <div class="ps-3 border-start"><a class="d-block text-danger text-decoration-none fs-xl" href="#" data-bs-toggle="tooltip" title="Remove"><i class="ai-x-circle"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                    <a class="d-block flex-shrink-0" href="shop-single.html"><img class="rounded" src="img/products/changio.jpg" alt="Product" width="60"></a>
+                    <div class="w-100 ps-2 ms-1">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="me-3">
+                                <h4 class="nav-heading fs-md mb-1"><a class="fw-medium" href="shop-single.html">Chân Giò Heo Muối</a></h4>
+                                <div class="d-flex align-items-center fs-sm"><span class="me-2">200.000đ</span><span class="me-2">x</span>
+                                    <input class="form-control form-control-sm px-2" type="number" style="max-width: 3.5rem;" min="1" value="1">
+                                </div>
+                            </div>
+                            <div class="ps-3 border-start"><a class="d-block text-danger text-decoration-none fs-xl" href="#" data-bs-toggle="tooltip" title="Remove"><i class="ai-x-circle"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="offcanvas-footer d-block border-top px-4 mb-2">
+                <div class="d-flex justify-content-between mb-4"><span>Total:</span><span class="h6 mb-0">490.000đ</span></div><a class="btn btn-primary btn-sm d-block w-100" href=""><i class="ai-credit-card fs-base me-2"></i>Thanh Toán</a>
+            </div>
+        </div>
+        <!-- Navbar (Solid background + shadow)-->
+        <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
+        <header class="header">
+            <div class="topbar topbar-dark bg-dark">
+                <div class="container d-md-flex align-items-center px-0 px-xl-3">
+                    <div class="d-md-block text-nowrap me-3"><i class="ai-phone fs-base text-muted me-1 align-middle"></i><span class="text-muted me-2">Liên hệ</span><a class="topbar-link me-1" href="tel:0903339991">090-333-9991</a></div>
+                    <div class="d-none d-md-blockd-flex text-md-end ms-md-auto"><a class="topbar-link pe-2 me-4 " href=""><i class="ai-facebook fs-base opacity-60 me-1 align-middle"></i>Hoang Linh Nhi LTD</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="navbar navbar-expand-lg navbar-light bg-light navbar-shadow navbar-sticky" data-scroll-header data-fixed-element>
+                <div class="navbar-search bg-light">
+                    <div class="container d-flex flex-nowrap align-items-center"><i class="ai-search fs-xl"></i>
+                        <input class="form-control form-control-xl navbar-search-field" type="text" placeholder="Search site">
+
+                        <div class="d-flex align-items-center"><span class="text-muted fs-xs d-none d-sm-inline">Close</span>
+                            <button class="btn-close p-2" type="button" data-bs-toggle="search"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container px-0 px-xl-3">
+                    <button class="navbar-toggler ms-n2 me-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#primaryMenu"><span class="navbar-toggler-icon"></span></button>
+                    <a class="navbar-brand flex-shrink-0 order-lg-1 mx-auto ms-lg-0 pe-lg-2 me-lg-4" href="index.html"><img class="d-none d-lg-block" src="img/logo/logo-hln.svg" alt="Hoang Linh Nhi" width="100"><img class="d-lg-none" src="img/logo/logo-hln.svg" alt="Hoang Linh Nhi" width="58"></a>
+                    <div class="d-flex align-items-center order-lg-3 ms-lg-auto">
+                        <div class="navbar-tool"><a class="navbar-tool-icon-box me-2" href="#" data-bs-toggle="search"><i class="ai-search"></i></a></div>
+                        <div class="navbar-tool d-none d-sm-flex"><a class="navbar-tool-icon-box me-2" href="#modal-signin" data-bs-toggle="modal" data-view="#modal-signin-view"><i class="ai-user"></i></a></div>
+                        <div class="border-start me-2" style="height: 30px;"></div>
+                        <div class="navbar-tool me-2"><a class="navbar-tool-icon-box" href="#" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart"><i class="ai-shopping-cart"></i><span class="navbar-tool-badge">3</span></a></div>
+                    </div>
+                    <div class="offcanvas offcanvas-collapse order-lg-2" id="primaryMenu">
+                        <div class="offcanvas-header navbar-shadow">
+                            <img src="img/logo/logo-hln.svg" alt="hoanglinhnhi" style="height:100px">
+                            <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <!-- Menu-->
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link fw-bold" href="index.html">Trang chủ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fw-bold active" href="hln-about.html">Về HLN</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fw-bold" href="hln-all-product.html">Sản phẩm</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fw-bold" href="hln-services.html">Dịch vụ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fw-bold" href="">Liên hệ</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="offcanvas-footer border-top"><a class="btn btn-translucent-primary d-block w-100" href="#modal-signin" data-bs-toggle="modal" data-view="#modal-signin-view"><i class="ai-user fs-lg me-2"></i>Sign in</a></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="container mb-3 my-md-0 py-5 py-md-6">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-5 order-md-1 order-2 text-md-start text-center">
+                    <h1 class="display-4 mb-lg-4 mb-3">Hoàng Linh Nhi LTD</h1>
+                    <h2 class="mb-lg-5 mb-4 text-muted">Câu Chuyện Thương Hiệu</h2>
+                    <div class="text-nowrap"><a class="btn btn-translucent-primary me-3" href="#"><i class="ai-arrow-down-circle mt-n1 me-2"></i>Download Hồ sơ năng lực</a>
+
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-7 order-md-2 order-1 mb-md-0 mb-grid-gutter"><img src="img/logo/logo-hln.svg" alt="Illustration"></div>
+            </div>
+        </section>
+
+        <section class="container">
+            <!-- RWD Service-->
+            <div class="row align-items-center border-bottom py-5">
+                <div class="col-lg-6 col-md-3 py-3"><img class="d-block mx-auto" src="img/demo/web-studio/services/01.svg" alt="Responsive Web Design"></div>
+                <div class="col-lg-6 col-md-6 py-3 text-dark">
+                    <h3 class="h4 mb-4 text-uppercase">Giới thiệu về công ty</h3>
+                    <ul class="list-unstyled">
+                        <li class="d-flex mb-2 pb-1"><i class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>Chính thức ra đời vào năm 2020, Công ty TNHH Hoàng Linh Nhi là đơn vị hàng đầu trên thị trường Việt Nam về Sản xuất ,cung cấp thực phẩm cho hệ thống các nhà hàng, khách sạn, siêu
+                          thị và các cửa hàng thực phẩm sạch trên toàn quốc với các tiêu chí: Chất lượng hàng đầu, Giá cả cạnh tranh, Dịch vụ hoàn hảo.</span></li>
+                        <li class="d-flex mb-2 pb-1"><i class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>Chất lượng hàng đầu: Hoàng Linh Nhi LTD đưa ra các yêu cầu khắt khe về việc lựa chọn nguồn nguyên liệu sạch, bảo đảm an toàn chất lượng nhất hiện nay trước khi đến tay mọi người tiêu
+                          dùng.</span></li>
+                        <li class="d-flex mb-2 pb-1"><i class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>Giá cả cạnh tranh: Luôn có nguồn nguyên liệu đảm bảo nên giá cả chúng tôi đem lại luôn cạnh tranh nhất và ổn định nhất trên thị trường. Giúp cho mọi khách hàng luôn được sử dụng những
+                          mặt hàng thực phẩm ổn định từ giá cả đến chất lượng.</span></li>
+                        <li class="d-flex mb-2 pb-1"><i class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>Dịch vụ hoàn hảo: Với đội ngũ nhân viên năng động, được đào tạo chuyên nghiệp cùng với hệ thống kênh phân phối rộng khắp cả nước, chúng tôi sẵn sàng đáp ứng các yêu cầu và tiêu chí
+                          khắt khe nhất của mọi đơn vị đối tác và khách hàng tiêu dùng trên cả nước. Trong thời gian ngắn, Hoàng Linh Nhi LTD đã được nhiều khách hàng lựa chọn là Nhà cung cấp thực phẩm uy tín, đối tác chiến lược để đồng hành cùng phát triển nền
+                          ẩm thực Việt Nam.</span></li>
+                    </ul>
+
+                </div>
+            </div>
+            <!-- Web Dev Service-->
+            <div class="row align-items-center border-bottom py-5">
+                <div class="col-md-6  py-3 order-md-2"><img class="d-block mx-auto" src="img/demo/web-studio/services/02.svg" alt="Web Development"></div>
+                <div class="col-xl-5 col-lg-5 col-md-6 offset-xl-1 py-3 order-md-1">
+                    <h3 class="h4 mb-4 text-uppercase">Lĩnh vực hoạt động</h3>
+                    <ul class="list-unstyled">
+                        <li class="d-flex mb-2 pb-1"><i class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>Chế biến, sản xuất thực phẩm</span></li>
+                        <li class="d-flex mb-2 pb-1"><i class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>Tư vấn trọn gói tiệc cưới hỏi, liên hoan, hội nghị</span></li>
+                        <li class="d-flex mb-2 pb-1"><i class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>Tư vấn, thiết kế, thi công, set up nhà hàng</span></li>
+                        <li class="d-flex mb-2 pb-1"><i class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>Bán buôn, bán lẻ thực phẩm đông lạnh</span></li>
+                        <li class="d-flex mb-2 pb-1"><i class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>Cung cấp suất ăn công nghiệp cho nhà máy, trường học</span></li>
+                    </ul>
+                    <span class="button-more">
+                      <a class="btn btn-primary" href="#"><i class="ai-refresh-ccw me-2"></i>Đọc thêm</a>
+                  </a>
+              </div>
+              </span>
+                </div>
+            </div>
+            <!-- Mobile Dev Service-->
+            <section class="container pt-5 mt-3 mt-md-0 pt-md-6 pt-lg-7 pb-md-4">
+                <h3 class="h4 mb-4 text-uppercase text-center">Thương hiệu của chúng tôi</h3>
+                <div class="row">
+                    <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter">
+                        <a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+                            <div class="card-body px-1 py-0 text-center">
+                                <div class="swap-image"><img class="" src="img/brand/sieuthisapa_color.svg" alt="Brand logo" width="150"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter">
+                        <a class="card border-0 shadow card-hover py-3 py-sm-4" href="https://www.facebook.com/B%E1%BA%BFp-X%C6%B0a-Tr%C3%B2n-V%E1%BB%8B-M%C3%B3n-X%C6%B0a-101973852271863">
+                            <div class="card-body px-1 py-0 text-center">
+                                <div class="swap-image">
+                                    <img class="logo" src="img/brand/bepxua_color.svg" alt="Brand logo" width="150"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter">
+                        <a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+                            <div class="card-body px-1 py-0 text-center">
+                                <div class="swap-image"><img class="" src="img/brand/beptrenmay_color.svg" alt="Brand logo" width="150"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter">
+                        <a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+                            <div class="card-body px-1 py-0 text-center">
+                                <div class="swap-image"><img class="" src="img/brand/huanfood_color.svg" alt="Brand logo" width="150"></div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+        </section>
+    </main>
+    <!-- Footer-->
+    <footer class="footer pt-5 pt-md-6 pt-5">
+        <div class="bg-darker pt-2">
+            <div class="container py-sm-3">
+                <div class="row pb-4 mb-2 pt-5 py-md-5">
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="d-flex align-items-center"><i class="ai-truck text-primary" style="font-size: 2.125rem;"></i>
+                            <div class="ps-3">
+                                <h6 class="fs-3 text-light mb-1">Giao Hàng Tận Nơi
+                                </h6>
+                                <p class="mb-0 fs-6 text-light opacity-50">Giao hàng tận nơi - Đảm bảo chất lượng</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="d-flex align-items-center"><i class="ai-refresh-cw text-primary" style="font-size: 2.125rem;"></i>
+                            <div class="ps-3">
+                                <h6 class="fs-3 text-light mb-1">Sản Phẩm</h6>
+                                <p class="mb-0 fs-6 text-light opacity-50">Cam kết 100% nguồn gốc xuất sứ rõ ràng</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="d-flex align-items-center"><i class="ai-package text-primary" style="font-size: 2.125rem;"></i>
+                            <div class="ps-3">
+                                <h6 class="fs-3 text-light mb-1">Khuyến Mại</h6>
+                                <p class="mb-0 fs-6 text-light opacity-50">Luôn có những chương trình ưu đãi đặc biệt</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-6 mb-4">
+                        <div class="d-flex align-items-center"><i class="ai-headphones text-primary" style="font-size: 2.125rem;"></i>
+                            <div class="ps-3">
+                                <h6 class="fs-3 text-light mb-1">Hỗ Trợ</h6>
+                                <p class="mb-0 fs-6 text-light opacity-50">Hotline hỗ trợ 24/7</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="hr-light my-0 mb-5">
+                <div class="container pb-2 text-center text-md-start">
+                    <div class="row pt-md-2 pb-3">
+                        <div class="col-lg-3 col-md-4 pb-4">
+                            <a class="d-inline-block mb-3" href="index.html" style="width: 153px;"><img src="img/logo/logo-hln.svg" alt="Hoanglinhnhiltd"></a>
+                        </div>
+                        <div class="col-lg-9 pt-2 pb-4 px-0">
+                            <div class="widget widget-light">
+                                <h4 class="widget-title mb-3">Liên hệ</h4>
+                                <div class="d-lg-flex">
+                                    <ul class="col-md-4">
+                                        <li><a class="widget-link" href="mailto:hoanglinhnhiltd@gmail.com"><i class="ai-mail fs-lg me-2"></i>hoanglinhnhiltd@gmail.com</a></li>
+                                    </ul>
+                                    <ul class="col-md-2 me-lg-4">
+                                        <li><a class="widget-link" href="tel:0903339991"><i class="ai-phone-call fs-lg me-2"></i>090-333-9991</a></li>
+                                    </ul>
+                                    <ul class="">
+                                        <li><a class="widget-link" href="https://goo.gl/maps/dDG195GgvXuj5Ssp6"><i class="ai-map-pin fs-lg me-2"></i>Cửa hàng bán và giới thiệu sản phẩm: Số 11 Nguyễn Ngọc Doãn, Đống Đa, Hà Nội.</a></li>
+                                        <li><a class="widget-link" href="https://goo.gl/maps/dDG195GgvXuj5Ssp6"><i class="ai-map-pin fs-lg me-2"></i>Xưởng Sản Xuất: Xóm Bắc, Kim Nỗ, Đông Anh, Hà Nội</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-md-3 pt-2 pb-4">
+                            <div class="widget widget-light">
+                                <h4 class="widget-title mb-3">Follow</h4><a class="btn-social bs-outline bs-light bs-facebook bs-lg me-2 mb-2" href="#"><i class="ai-facebook"></i></a><a class="btn-social bs-outline bs-light bs-twitter bs-lg me-2 mb-2" href="#"><i class="ai-twitter"></i></a>
+                                <a class="btn-social bs-outline bs-light bs-instagram bs-lg me-2 mb-2" href="#"><i class="ai-instagram"></i></a><a class="btn-social bs-outline bs-light bs-google bs-lg mb-2" href="#"><i class="ai-google"></i></a>
+                            </div>
+                        </div> -->
+                    </div>
+
+                </div>
+                <div class="d-sm-flex justify-content-between align-items-center pb-4 pb-sm-2">
+                    <!-- <div class="order-sm-2 mb-4 mb-sm-3"><img alt="Payment methods" src="img/footer/cards.png" width="181">
+                    </div> -->
+                    <div class="order-sm-1 mb-3">
+                        <p class="fs-ms mb-0"><span class="text-light opacity-50 me-1">© All rights reserved. Made by</span><a class="nav-link-style nav-link-light" href="https://hoanglinhnhi.vn/" rel="noopener" target="_blank">Hoang Linh Nhi LTD</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Back to top button--><a class="btn-scroll-top" data-fixed-element data-scroll href="#top"><span
+        class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span><i class="btn-scroll-top-icon ai-arrow-up"> </i></a>
+    <!-- Vendor scrits: js libraries and plugins-->
+    <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+    <!-- Main theme script-->
+    <script src="js/theme.min.js"></script>
+</body>
+
+
+</html>

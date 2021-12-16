@@ -1222,7 +1222,7 @@
  */
     
      :root {
-        --bs-yellow-hln: #edc68e;
+        --bs-yellow-hln: #BB9F58;
         --bs-green-hln: #046263;
         --bs-blue: #0d6efd;
         --bs-indigo: #6610f2;
@@ -1386,7 +1386,10 @@
     
     p {
         margin-top: 0;
-        margin-bottom: 1.25rem
+        margin-bottom: 1.25rem;
+        font-size: 18px;
+        line-height: 28.8px;
+        color: #000;
     }
     
     abbr[title],
@@ -1474,7 +1477,7 @@
     }
     
     a:hover {
-        color: #493ef0;
+        color: #9c7e46;
         text-decoration: underline
     }
     
@@ -4351,8 +4354,8 @@
     
     .btn-primary:hover {
         color: #000;
-        background-color: #8b83f6;
-        border-color: #847cf5
+        background-color: #9c7e46;
+        border-color: #9c7e46
     }
     
     .btn-check:focus+.btn-primary,
@@ -20983,7 +20986,7 @@
         }
     }
     
-    .active-filter {
+    .filter {
         display: inline-block;
         padding: .375rem .75rem;
         transition: background-color .25s ease-in-out, color .25s ease-in-out;
@@ -20996,13 +20999,12 @@
         text-decoration: none
     }
     
-    .active-filter:hover {
+    .filter:hover {
         background-color: #ececf8;
         color: #4a4b65;
         text-decoration: none
     }
-    
-    .active-filter::after {
+    /* .filter::after {
         display: inline-block;
         margin-top: -0.125rem;
         margin-left: .3125rem;
@@ -21010,7 +21012,7 @@
         font-size: 1.2em;
         vertical-align: middle;
         content: ""
-    }
+    } */
     
     @media(min-width: 500px) {
         .order-item {
