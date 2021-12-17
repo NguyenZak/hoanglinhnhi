@@ -20898,8 +20898,9 @@
     .product-gallery-thumblist-item {
         display: block;
         position: relative;
+        object-fit: cover;
         width: 4.375rem;
-        height: 4.375rem;
+        height: auto;
         margin: .75rem;
         transition: border-color .2s ease-in-out;
         border: 1px solid #e9e9f2;
@@ -20960,6 +20961,7 @@
     
     .product-gallery-preview-item>img {
         display: block;
+        border-radius: 1rem;
         width: 100%
     }
     
