@@ -36,7 +36,7 @@
     
     .moreBtn span {
         text-align: center;
-        color: var(--bs-green-hln);
+        color: var(--bs-white);
         position: relative;
         z-index: 1;
         transition: color 0.6s cubic-bezier(0.53, 0.21, 0, 1);
@@ -88,7 +88,7 @@
     
     .service-more span {
         text-align: center;
-        color: var(--bs-green-hln);
+        color: var(--bs-white);
         position: relative;
         z-index: 1;
         transition: color 0.6s cubic-bezier(0.53, 0.21, 0, 1);
@@ -197,4 +197,8 @@
     .filter.active {
         color: var(--bs-yellow-hln);
         border: 1px solid var(--bs-yellow-hln)
+    }
+    
+    small {
+        font-size: 14px;
     }

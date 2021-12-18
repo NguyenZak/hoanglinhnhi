@@ -165,7 +165,7 @@
                                 <div class="mb-3">
                                     <div class="input-group"><i class="ai-lock position-absolute top-50 start-0 translate-middle-y ms-3"></i>
                                         <div class="password-toggle w-100">
-                                            <input class="form-control" type="password" placeholder="Mật khẩu" required>
+                                            <input class="form-control" type="password" placeholder="Password" required>
                                             <label class="password-toggle-btn" aria-label="Show/hide password">
                           <input class="password-toggle-check" type="checkbox"><span class="password-toggle-indicator"></span>
                         </label>
@@ -175,7 +175,7 @@
                                 <div class="d-flex justify-content-between align-items-center mb-3 mb-3">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="keep-signed">
-                                        <label class="form-check-label fs-sm" for="keep-signed">Nhớ</label>
+                                        <label class="form-check-label fs-sm" for="keep-signed">Keep me signed in</label>
                                     </div><a class="nav-link-style fs-ms" href="password-recovery.html">Quên mật khẩu</a>
                                 </div>
                                 <button class="btn btn-primary d-block w-100" type="submit">Đăng nhập</button>
@@ -189,23 +189,22 @@
                             <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="btn-close"></button>
                         </div>
                         <div class="modal-body px-4">
-                            <p class="fs-ms text-muted">Việc đăng ký chỉ mất chưa đầy một phút nhưng cho phép bạn toàn quyền kiểm soát các đơn đặt hàng của mình.
-                            </p>
+                            <p class="fs-ms text-muted">Registration takes less than a minute but gives you full control over your orders.</p>
                             <form class="needs-validation" novalidate>
                                 <div class="mb-3">
-                                    <input class="form-control" type="text" placeholder="Tên của bạn" required>
+                                    <input class="form-control" type="text" placeholder="Full name" required>
                                 </div>
                                 <div class="mb-3">
                                     <input class="form-control" type="text" placeholder="Email" required>
                                 </div>
                                 <div class="mb-3 password-toggle">
-                                    <input class="form-control" type="password" placeholder="Mật khẩu" required>
+                                    <input class="form-control" type="password" placeholder="Password" required>
                                     <label class="password-toggle-btn" aria-label="Show/hide password">
                       <input class="password-toggle-check" type="checkbox"><span class="password-toggle-indicator"></span>
                     </label>
                                 </div>
                                 <div class="mb-3 password-toggle">
-                                    <input class="form-control" type="password" placeholder="Nhập lại mật khẩu" required>
+                                    <input class="form-control" type="password" placeholder="Confirm password" required>
                                     <label class="password-toggle-btn" aria-label="Show/hide password">
                       <input class="password-toggle-check" type="checkbox"><span class="password-toggle-indicator"></span>
                     </label>
@@ -338,140 +337,131 @@
             </div>
         </header>
         <!-- Page content-->
-        <section class="jarallax bg-gradient pt-5 pb-7 pt-md-7" data-jarallax data-speed="0.25"><span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-80"></span>
-            <div class="jarallax-img" style="background-image: url(img/pages/contacts/page-title-bg.jpg);"></div>
-            <div class="container position-relative zindex-5 pt-3 pb-7 pt-md-0">
-                <div class="row justify-content-center py-md-5">
-                    <div class="col-lg-6 col-md-8 text-center pt-2 mb-n3">
-                        <h1 class="text-light">Liên hệ</h1>
-                        <p class="text-light">Kết nối với chúng tôi để được sử dụng những sản phẩm chất lượng nhất</p>
-                    </div>
-                </div>
+        <div class="position-relative bg-gradient" style="height: 480px;">
+            <div class="shape shape-bottom shape-slant bg-secondary d-none d-lg-block">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 260">
+              <polygon fill="currentColor" points="0,257 0,260 3000,260 3000,0"></polygon>
+            </svg>
             </div>
-        </section>
-        <!-- Contact cards (details)-->
-        <section class="container-fluid bg-overlay-content mb-5 mb-md-6" style="margin-top: -120px;">
+        </div>
+        <!-- Page content-->
+        <div class="container position-relative zindex-5 pb-4 mb-md-3" style="margin-top: -350px;">
             <div class="row">
-                <div class="col-lg-3 col-sm-6 mb-grid-gutter">
-                    <div class="card h-100 border-0 shadow-lg py-4">
-                        <div class="card-body text-center"><i class="ai-map-pin mb-4 text-primary" style="font-size: 2.25rem;"></i>
-                            <h3 class="h6 mb-2">Địa chỉ</h3>
-                            <p class="fs-sm mb-2">11 Nguyễn Ngọc Doãn, Đống Đa, Hà Nội</p><a class="fancy-link fs-sm" href="#map" data-scroll>See on the map</a>
+                <!-- Sidebar-->
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="bg-light rounded-3 shadow-lg">
+                        <div class="px-4 py-4 mb-1 text-center"><img class="d-block rounded-circle mx-auto my-2" src="img/dashboard/avatar/main.jpg" at="Amanda Wilson" width="110">
+                            <h6 class="mb-0 pt-1">Amanda Wilson</h6><span class="text-muted fs-sm">@amanda_w</span>
+                        </div>
+                        <div class="d-lg-none px-4 pb-4 text-center"><a class="btn btn-primary px-5 mb-2" href="#account-menu" data-bs-toggle="collapse"><i class="ai-menu me-2"></i>Account menu</a></div>
+                        <div class="d-lg-block collapse pb-2" id="account-menu">
+                            <h3 class="d-block bg-secondary fs-sm fw-semibold text-muted mb-0 px-4 py-3">Dashboard</h3><a class="d-flex align-items-center nav-link-style px-4 py-3" href="dashboard-orders.html"><i class="ai-shopping-bag fs-lg opacity-60 me-2"></i>Orders<span class="nav-indicator"></span><span class="text-muted fs-sm fw-normal ms-auto">2</span></a>
+                            <a class="d-flex align-items-center nav-link-style px-4 py-3 border-top" href="dashboard-sales.html"><i class="ai-dollar-sign fs-lg opacity-60 me-2"></i>Sales<span class="text-muted fs-sm fw-normal ms-auto">$735.00</span></a>
+                            <a class="d-flex align-items-center nav-link-style px-4 py-3 border-top" href="dashboard-messages.html"><i class="ai-message-square fs-lg opacity-60 me-2"></i>Messages<span class="nav-indicator"></span><span class="text-muted fs-sm fw-normal ms-auto">1</span></a>
+                            <a class="d-flex align-items-center nav-link-style px-4 py-3 border-top" href="dashboard-followers.html"><i class="ai-users fs-lg opacity-60 me-2"></i>Followers<span class="text-muted fs-sm fw-normal ms-auto">34</span></a>
+                            <a class="d-flex align-items-center nav-link-style px-4 py-3 border-top" href="dashboard-reviews.html"><i class="ai-star fs-lg opacity-60 me-2"></i>Reviews<span class="text-muted fs-sm fw-normal ms-auto">15</span></a>
+                            <a class="d-flex align-items-center nav-link-style px-4 py-3 border-top" href="dashboard-favorites.html"><i class="ai-heart fs-lg opacity-60 me-2"></i>Favorites<span class="text-muted fs-sm fw-normal ms-auto">6</span></a>
+                            <h3 class="d-block bg-secondary fs-sm fw-semibold text-muted mb-0 px-4 py-3">Account settings</h3><a class="d-flex align-items-center nav-link-style px-4 py-3 active" href="account-profile.html">Profile info</a><a class="d-flex align-items-center nav-link-style px-4 py-3 border-top" href="account-payment.html">Payment methods</a>
+                            <div class="d-flex align-items-center border-top"><a class="d-block w-100 nav-link-style px-4 py-3" href="account-notifications.html">Notifications</a>
+                                <div class="ms-auto px-3">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="notifications-switch" data-master-checkbox-for="#notification-settings" checked>
+                                        <label class="form-check-label" for="notifications-switch"></label>
+                                    </div>
+                                </div>
+                            </div><a class="d-flex align-items-center nav-link-style px-4 py-3 border-top" href="signin-illustration.html"><i class="ai-log-out fs-lg opacity-60 me-2"></i>Sign out</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 mb-grid-gutter">
-                    <div class="card h-100 border-0 shadow-lg py-4">
-                        <div class="card-body text-center"><i class="ai-clock mb-4 text-danger" style="font-size: 2.25rem;"></i>
-                            <h3 class="h6 mb-2">Thời gian làm việc</h3>
-                            <ul class="list-unstyled fs-sm mb-0">
-                                <li>Mon - Sun: 6AM - 22PM </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 mb-grid-gutter">
-                    <div class="card h-100 border-0 shadow-lg py-4">
-                        <div class="card-body text-center"><i class="ai-phone mb-4 text-success" style="font-size: 2.25rem;"></i>
-                            <h3 class="h6 mb-2">Điện thoại</h3>
-                            <ul class="list-unstyled fs-sm mb-0">
-                                <li><span class="me-1">Customer service:</span><a class="nav-link-style" href="tel:+0903339991">090-333-9991</a></li>
+                <!-- Content-->
+                <div class="col-lg-8">
+                    <div class="d-flex flex-column h-100 bg-light rounded-3 shadow-lg p-4">
+                        <div class="py-2 p-md-3">
+                            <!-- Title + Delete link-->
+                            <div class="d-sm-flex align-items-center justify-content-between pb-4 text-center text-sm-start">
+                                <h1 class="h3 mb-2 text-nowrap">Thông tin cá nhân</h1><a class="btn btn-link text-danger fw-medium btn-sm mb-2" href="#"><i class="ai-trash-2 fs-base me-2"></i>Xoá tài khoản</a>
+                            </div>
+                            <!-- Content-->
+                            <div class="bg-secondary rounded-3 p-4 mb-4">
+                                <div class="d-block d-sm-flex align-items-center"><img class="d-block rounded-circle mx-sm-0 mx-auto mb-3 mb-sm-0" src="img/dashboard/avatar/main.jpg" alt="Amanda Wilson" width="110">
+                                    <div class="ps-sm-3 text-center text-sm-start">
+                                        <button class="btn btn-light shadow btn-sm mb-2" type="button"><i class="ai-refresh-cw me-2"></i>Đổi ảnh đại diện</button>
+                                        <div class="p mb-0 fs-ms text-muted">Upload JPG, GIF or PNG image. 300 x 300 required.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="mb-3 pb-1">
+                                        <label class="form-label px-0" for="account-fn">Họ</label>
+                                        <input class="form-control" type="text" id="account-fn" value="Amanda">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="mb-3 pb-1">
+                                        <label class="form-label px-0" for="account-ln">Tên</label>
+                                        <input class="form-control" type="text" id="account-ln" value="Wilson">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="mb-3 pb-1">
+                                        <label class="form-label px-0" for="account-email">Email</label>
+                                        <input class="form-control" type="text" id="account-email" value="hoanglinhnh@gmail.com">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="mb-3 pb-1">
+                                        <label class="form-label px-0" for="account-username">Username</label>
+                                        <div class="input-group"><span class="input-group-text">@</span>
+                                            <input class="form-control" type="text" id="account-username" value="amanda_w">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="mb-3 pb-1">
+                                        <label class="form-label px-0" for="account-country">Tỉnh/Thành phố</label>
+                                        <select class="form-select" id="account-country">
+                          <option value>Chọn Tỉnh/Thành phố</option>
+                          <option value="Argentina">Hà Nội</option>
+                          <option value="Belgium">Thành phố Hồ Chí Minh</option>
+                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="mb-3 pb-1">
+                                        <label class="form-label px-0" for="account-country">Quận/Huyện</label>
+                                        <select class="form-select" id="account-country">
+                          <option value>Chọn Quận/Huyện</option>
+                          <option value="Argentina">Ba Đình</option>
+                          <option value="Belgium">Dống Đa</option>
+                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="mb-3 pb-1">
+                                        <label class="form-label px-0" for="account-city">Đường, Số nhà, Toà nhà</label>
+                                        <input class="form-control" type="text" id="account-city" value="New York">
+                                    </div>
+                                </div>
 
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 mb-grid-gutter">
-                    <div class="card h-100 border-0 shadow-lg py-4">
-                        <div class="card-body text-center"><i class="ai-mail mb-4 text-warning" style="font-size: 2.25rem;"></i>
-                            <h3 class="h6 mb-2">Email</h3>
-                            <ul class="list-unstyled fs-sm mb-0">
-                                <li><span class="me-1">Customer service:</span><a class="nav-link-style" href="mailto:hoanglinhnhiltd@gmail.com">hoanglinhnhiltd@gmail.com</a></li>
 
-                            </ul>
+                                <div class="col-12">
+                                    <hr class="mt-2 mb-4">
+                                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                                        <div class="form-check d-block">
+                                            <input class="form-check-input" type="checkbox" id="show-email" checked>
+                                            <label class="form-check-label" for="show-email">Show my email to registered users</label>
+                                        </div>
+                                        <button class="btn btn-primary mt-3 mt-sm-0" type="button"><i class="ai-save fs-lg me-2"></i>Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Contact cards (offices)-->
-        <section class="container mb-5 mb-md-6">
-            <h2 class="text-center mb-4 pb-4">Địa điểm</h2>
-            <div class="row">
-                <div class="col-lg-4 col-sm-6 mb-grid-gutter">
-                    <div class="card h-100 border-0 shadow mx-auto"><img class="card-img-top" src="img/pages/contacts/orlando.jpg" alt="Orlando">
-                        <div class="card-body">
-                            <h5>Cửa hàng bán và giới thiệu sản phẩm</h5>
-                            <ul class="list-unstyled mb-0">
-                                <li class="d-flex align-items-start pb-3 border-bottom"><i class="ai-map-pin fs-lg mt-2 mb-0 text-primary"></i>
-                                    <div class="ps-3"><span class="fs-ms text-muted">Địa chỉ</span><a class="d-block nav-link-style fs-sm" href="#">11 Nguyễn Ngọc Doãn, Đống Đa, Hà Nội</a></div>
-                                </li>
-                                <li class="d-flex align-items-start pt-2 pb-3 border-bottom"><i class="ai-phone fs-lg mt-2 mb-0 text-primary"></i>
-                                    <div class="ps-3"><span class="fs-ms text-muted">Điện thoại</span><a class="d-block nav-link-style fs-sm" href="tel:+0903339991">090-333-9991</a></div>
-                                </li>
-                                <li class="d-flex align-items-start pt-2"><i class="ai-mail fs-lg mt-2 mb-0 text-primary"></i>
-                                    <div class="ps-3"><span class="fs-ms text-muted">Email</span><a class="d-block nav-link-style fs-sm" href="mailto:hoanglinhnhiltd@gmail.com">hoanglinhnhiltd@gmail.com</a></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-grid-gutter">
-                    <div class="card h-100 border-0 shadow mx-auto"><img class="card-img-top" src="img/pages/contacts/orlando.jpg" alt="Orlando">
-                        <div class="card-body">
-                            <h5>Xưởng sản xuất</h5>
-                            <ul class="list-unstyled mb-0">
-                                <li class="d-flex align-items-start pb-3 border-bottom"><i class="ai-map-pin fs-lg mt-2 mb-0 text-primary"></i>
-                                    <div class="ps-3"><span class="fs-ms text-muted">Địa chỉ</span><a class="d-block nav-link-style fs-sm" href="#">Xóm Bắc, Kim Nỗ, Đông Anh, Hà Nội</a></div>
-                                </li>
-                                <li class="d-flex align-items-start pt-2 pb-3 border-bottom"><i class="ai-phone fs-lg mt-2 mb-0 text-primary"></i>
-                                    <div class="ps-3"><span class="fs-ms text-muted">Điện thoại</span><a class="d-block nav-link-style fs-sm" href="tel:+0903339991">090-333-9991</a></div>
-                                </li>
-                                <li class="d-flex align-items-start pt-2"><i class="ai-mail fs-lg mt-2 mb-0 text-primary"></i>
-                                    <div class="ps-3"><span class="fs-ms text-muted">Email</span><a class="d-block nav-link-style fs-sm" href="mailto:hoanglinhnhiltd@gmail.com">hoanglinhnhiltd@gmail.com</a></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Map + Contact form-->
-        <section class="border-top" id="map">
-            <div class="row g-0 gallery">
-                <a class="col-lg-6">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.623667076094!2d105.82934721493224!3d21.007717386009787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac7fa21621ad%3A0x79901f6c89843eeb!2zMTEgUC4gTmd1eeG7hW4gTmfhu41jIERvw6NuLCBRdWFuZyBUcnVuZywgxJDhu5FuZyDEkGEsIEjDoCBO4buZaSAxMDAwMDA!5e0!3m2!1svi!2s!4v1639735396134!5m2!1svi!2s"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </a>
-                <div class="col-lg-6 px-3 px-lg-5">
-                    <div class="pt-5 pb-6 pt-md-6 mx-auto" style="max-width: 720px;">
-                        <h2 class="h3 pb-4">Để lại thông tin liên hệ tư vấn</h2>
-                        <form class="needs-validation row" novalidate>
-                            <div class="col-sm-6 mb-3 pb-1">
-                                <label class="form-label" for="cont-fn">Tên<sup class="text-danger ms-1">*</sup></label>
-                                <input class="form-control" type="text" id="cont-fn" placeholder="John Doe" required>
-                                <div class="invalid-feedback">Vui lòng nhập tên của bạn</div>
-                            </div>
+        </div>
 
-                            <div class="col-sm-6 mb-3 pb-1">
-                                <label class="form-label" for="cont-phone">Số điện thoại</label>
-                                <input class="form-control bg-image-0" type="text" id="cont-phone" data-format="custom" data-delimiter="-" data-blocks="2 4 2 2" placeholder="00-0000-00-00" required>
-                                <div class="invalid-feedback">Nhập số điện thoại</div>
-                            </div>
-
-                            <div class="col-12 mb-3 pb-1">
-                                <label class="form-label" for="cont-message">Nội dung cần tư vấn<sup class="text-danger ms-1">*</sup></label>
-                                <textarea class="form-control" id="cont-message" rows="4" placeholder="Vui lòng nhập nội dung cần tư vấn" required></textarea>
-                                <div class="invalid-feedback">Vui lòng nhập nội dung cần tư vấn</div>
-                            </div>
-                            <div class="col-12 pt-2">
-                                <button class="btn btn-primary" type="submit">Gửi</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
 
 
 
